@@ -1,0 +1,385 @@
+/* ================================================
+   style.css
+   Handcrafted for Emmanuel’s First Holy Communion
+   Warm, natural, and intentionally human.
+   ================================================ */
+
+:root {
+    --gold: #d4af77;
+    --cream: #f9f7f2;
+    --warm-white: #fdfaf5;
+    --text: #2c2c2c;
+    --soft-text: #555;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* Typography – elegant yet approachable */
+h1, h2, h3 {
+    font-family: Georgia, 'Playfair Display', serif;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+}
+
+h1 { font-size: clamp(3rem, 7vw, 4.8rem); }
+h2 { font-size: clamp(2.2rem, 5vw, 3rem); }
+
+/* NAVIGATION */
+nav {
+    position: sticky;
+    top: 0;
+    background: rgba(253, 250, 245, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(212, 175, 119, 0.15);
+    z-index: 100;
+}
+
+.nav-container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 22px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.nav-brand {
+    font-size: 1.5rem;
+    font-family: Georgia, serif;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cross { color: var(--gold); }
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+.nav-links a {
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover { color: var(--gold); }
+
+.rsvp-btn {
+    background: var(--gold);
+    color: white;
+    padding: 12px 28px;
+    border-radius: 9999px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(212, 175, 119, 0.3);
+}
+
+.rsvp-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(212, 175, 119, 0.4);
+}
+
+/* HERO */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(180deg, #fdfaf5 0%, #f4f0e8 100%);
+    position: relative;
+    padding: 120px 40px 80px;
+}
+
+.hero-content {
+    max-width: 820px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+.hero-ornament {
+    margin: 0 auto 2rem;
+    animation: gentle-float 6s ease-in-out infinite;
+}
+
+.hero-title {
+    margin-bottom: 0.4rem;
+    color: var(--text);
+}
+
+.hero-name {
+    font-size: clamp(2.4rem, 6vw, 3.6rem);
+    margin-bottom: 2rem;
+    color: var(--text);
+    opacity: 0.95;
+}
+
+.hero-verse {
+    font-size: 1.4rem;
+    font-style: italic;
+    max-width: 520px;
+    margin: 0 auto 2.5rem;
+    color: var(--soft-text);
+}
+
+.hero-verse cite {
+    display: block;
+    margin-top: 0.8rem;
+    font-style: normal;
+    font-size: 1rem;
+    color: var(--gold);
+}
+
+.hero-date {
+    display: inline-block;
+    background: rgba(212, 175, 119, 0.12);
+    color: var(--gold);
+    padding: 14px 42px;
+    border-radius: 60px;
+    font-size: 1.25rem;
+    font-weight: 500;
+    border: 1px solid rgba(212, 175, 119, 0.3);
+}
+
+.scroll-hint {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    color: var(--gold);
+    opacity: 0.7;
+}
+
+/* SECTION STYLING – natural spacing */
+.section {
+    padding: 110px 40px;
+}
+
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header .accent {
+    color: var(--gold);
+    font-size: 1.8rem;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Message Section – feels like a handwritten letter */
+.message-section {
+    background: white;
+}
+
+.message-wrapper {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    border: 1px solid rgba(212, 175, 119, 0.25);
+    border-radius: 28px;
+    background: var(--warm-white);
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.08);
+}
+
+.greeting {
+    font-size: 1.35rem;
+    margin-bottom: 1.5rem;
+    color: var(--soft-text);
+}
+
+.invitation-text {
+    font-size: 1.35rem;
+    line-height: 1.75;
+    margin-bottom: 2rem;
+}
+
+.closing { margin-bottom: 2rem; }
+.signature {
+    font-family: Georgia, serif;
+    font-style: italic;
+    color: var(--gold);
+    font-size: 1.3rem;
+}
+
+/* Cards – intentionally soft and not boxy */
+.event-card, .reception-card {
+    background: white;
+    padding: 42px;
+    border-radius: 24px;
+    border: 1px solid rgba(212, 175, 119, 0.2);
+    box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.07);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.event-card:hover, .reception-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 50px -15px rgba(212, 175, 119, 0.25);
+}
+
+.time-badge {
+    display: inline-block;
+    background: var(--gold);
+    color: white;
+    padding: 6px 22px;
+    border-radius: 9999px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+}
+
+.mass-card .time-badge { background: #d4af77; }
+
+.lunch { background: #c9a56e; }
+.dinner { background: #b38f5c; }
+
+address {
+    font-style: normal;
+    line-height: 1.6;
+    font-size: 1.15rem;
+}
+
+/* Reception grid – slightly asymmetric */
+.reception-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 32px;
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+/* Location buttons */
+.location-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.map-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    color: var(--text);
+    padding: 18px 34px;
+    border: 2px solid var(--gold);
+    border-radius: 9999px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.map-btn:hover {
+    background: var(--gold);
+    color: white;
+    transform: scale(1.04);
+}
+
+/* Blessing */
+.blessing-section {
+    background: linear-gradient(to bottom, #f9f7f2, #f0ede6);
+}
+
+.blessing-wrapper {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 60px 30px;
+}
+
+.blessing-wrapper blockquote {
+    font-size: 1.45rem;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: var(--soft-text);
+}
+
+.blessing-wrapper cite {
+    color: var(--gold);
+    font-size: 1.1rem;
+}
+
+.blessing-note {
+    margin-top: 2.5rem;
+    font-size: 1.15rem;
+    opacity: 0.9;
+}
+
+/* Footer */
+footer {
+    background: #2c2c2c;
+    color: #e8e4d9;
+    padding: 80px 40px 40px;
+    text-align: center;
+}
+
+.footer-text {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.footer-divider {
+    height: 1px;
+    width: 120px;
+    background: linear-gradient(to right, transparent, #d4af77, transparent);
+    margin: 2rem auto;
+}
+
+small {
+    opacity: 0.5;
+    font-size: 0.9rem;
+}
+
+/* ANIMATIONS & RESPONSIVE */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 900ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes gentle-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .section { padding: 80px 24px; }
+    .message-wrapper { padding: 48px 24px; }
+}
