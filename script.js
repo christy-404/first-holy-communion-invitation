@@ -1,47 +1,36 @@
 /* ================================================
    script.js
-   Gentle, handcrafted interactions – no bloat.
-   Made with love for a special day.
+   Gentle, handcrafted interactions for Emmanuel’s 
+   First Holy Communion invitation.
    ================================================ */
 
-// Fade-in on scroll – feels natural and alive
-function initScrollAnimations() {
-    const elements = document.querySelectorAll('.section, .hero-content > *');
+// Fade-in on scroll
+function initFadeIns() {
+    const elements = document.querySelectorAll('.section, .message-card, .details-block, .reception-block, .blessing, .hero-content > *');
     
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
+        entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('fade-in', 'visible');
-                observer.unobserve(entry.target); // once is enough
+                observer.unobserve(entry.target);
             }
         });
-    }, {
-        threshold: 0.15,
-        rootMargin: '0px 0px -60px 0px'
+    }, { 
+        threshold: 0.13,
+        rootMargin: "0px 0px -50px 0px"
     });
     
-    elements.forEach((el) => observer.observe(el));
+    elements.forEach(el => observer.observe(el));
 }
 
-// Subtle hover micro-interaction on cards
-function addCardHovers() {
-    const cards = document.querySelectorAll('.event-card, .reception-card, .map-btn');
-    cards.forEach(card => {
-        card.addEventListener('mouseenter', () => {
-            card.style.transitionDuration = '280ms';
-        });
-    });
-}
-
-// Smooth scrolling for nav links
+// Smooth scrolling for navigation
 function enableSmoothScroll() {
-    const links = document.querySelectorAll('nav a[href^="#"]');
-    links.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', e => {
             const target = document.querySelector(link.getAttribute('href'));
             if (target) {
-                target.scrollIntoView({
+                e.preventDefault();
+                target.scrollIntoView({ 
                     behavior: 'smooth',
                     block: 'start'
                 });
@@ -50,21 +39,30 @@ function enableSmoothScroll() {
     });
 }
 
-// Console signature – because real developers leave their mark
-function showSignature() {
-    console.log('%c❤️ First Holy Communion invitation for Emmanuel – handcrafted with warmth and care. May this day be filled with blessings.', 
-                'color:#d4af77; font-family:Georgia; font-size:13px; padding:2px 6px; border:1px solid #d4af77; border-radius:3px;');
+// Subtle hover enhancement
+function addHoverDepth() {
+    const interactive = document.querySelectorAll('.location-btn, .rsvp-btn, .reception-block');
+    interactive.forEach(el => {
+        el.addEventListener('mouseenter', () => {
+            el.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+        });
+    });
 }
 
-// Initialize everything when the page is ready
+// Console message (for developers)
+function showSignature() {
+    console.log('%c✧ First Holy Communion Invitation for Emmanuel — crafted with warmth and reverence.', 
+                'color:#d4af77; font-family:Georgia; font-size:13px;');
+}
+
+// Initialize
 function initialize() {
-    initScrollAnimations();
-    addCardHovers();
+    initFadeIns();
     enableSmoothScroll();
+    addHoverDepth();
     showSignature();
     
-    console.log('✅ Invitation loaded – ready to celebrate Emmanuel’s special day.');
+    console.log('✅ Emmanuel’s invitation is ready. May this day be filled with blessings.');
 }
 
-// Fire it up
 window.addEventListener('load', initialize);
