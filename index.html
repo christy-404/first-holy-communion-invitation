@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- NAVIGATION -->
+    <!-- NAVIGATION - Preserved with all links -->
     <nav aria-label="Main navigation">
         <div class="nav-container">
             <a href="#" class="nav-brand">Emmanuel</a>
@@ -16,7 +16,7 @@
                 <a href="#message">Invitation</a>
                 <a href="#mass">Mass</a>
                 <a href="#reception">Reception</a>
-                <a href="#location">Directions</a>
+                <a href="#directions">Directions</a>
             </div>
             <a href="mailto:family@email.com?subject=RSVP%20-%20Emmanuel's%20First%20Holy%20Communion" 
                class="rsvp-btn">
@@ -25,16 +25,10 @@
         </div>
     </nav>
 
-    <!-- HERO -->
+    <!-- HERO SECTION -->
     <header class="hero" id="hero">
-        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <div class="ornament">
-                <svg width="68" height="68" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <rect x="46" y="15" width="8" height="70" rx="2" fill="#d4af77" opacity="0.25"/>
-                    <rect x="15" y="46" width="70" height="8" rx="2" fill="#d4af77" opacity="0.25"/>
-                </svg>
-            </div>
+            <img src="eucharist-symbol.png" alt="Eucharist symbol" class="eucharist-symbol" width="72" height="72">
             
             <h1 class="hero-title">First Holy Communion</h1>
             <p class="hero-name">Emmanuel S Koodathinkal</p>
@@ -44,100 +38,112 @@
                 <cite>— John 6:35</cite>
             </div>
             
-            <div class="date">
-                <span>26 April 2026</span>
-            </div>
+            <div class="date-badge">26 April 2026</div>
             
-            <div class="scroll-hint">
-                <span>Begin the journey</span>
-                <div class="arrow">↓</div>
+            <div class="portrait-container">
+                <img src="emmanuel.jpg" alt="Emmanuel S Koodathinkal" class="portrait" loading="lazy">
             </div>
         </div>
     </header>
 
     <!-- INVITATION MESSAGE -->
-    <section class="section message" id="message">
+    <section class="section" id="message">
         <div class="container">
             <div class="message-card">
                 <p class="greeting">Dear Family and Friends,</p>
-                
                 <p>It is with great joy and gratitude that we invite you to celebrate the First Holy Communion of our beloved son,</p>
-                
                 <p class="name-highlight">Emmanuel S Koodathinkal</p>
-                
                 <p>May this sacred milestone be filled with God’s abundant blessings, love, and cherished memories that will remain with us forever.</p>
-                
                 <p>Your presence on this holy day will make our celebration complete.</p>
-                
-                <div class="signature">
-                    With love and prayers,<br>
-                    The Koodathinkal Family
-                </div>
+                <div class="signature">With love and prayers,<br>The Koodathinkal Family</div>
             </div>
         </div>
     </section>
 
-    <!-- HOLY COMMUNION MASS -->
+    <!-- MASS & CHURCH - Combined logically (Image + Details) -->
     <section class="section mass-section" id="mass">
         <div class="container">
-            <div class="section-header">
-                <span class="divider"></span>
-                <h2>Holy Communion Mass</h2>
-            </div>
-            
-            <div class="details-block">
-                <div class="time">8:00 AM</div>
-                <div class="info">
-                    <strong>Sunday, 26 April 2026</strong><br>
-                    St Joseph Church<br>
-                    KP Vallon Road, Kadavanthara<br>
-                    Kochi – 682020
+            <div class="mass-church-grid">
+                <!-- Church Image -->
+                <div class="church-column">
+                    <img src="church.jpg" alt="St Joseph Church" class="church-image" loading="lazy">
+                    <div class="church-caption">St Joseph Church, Kadavanthara</div>
+                </div>
+                
+                <!-- Mass Details -->
+                <div class="mass-column">
+                    <div class="section-header">
+                        <span class="gold-divider"></span>
+                        <h2>Holy Communion Mass</h2>
+                    </div>
+                    
+                    <div class="mass-details">
+                        <div class="detail-row">
+                            <strong>Time</strong>
+                            <span>8:00 AM</span>
+                        </div>
+                        <div class="detail-row">
+                            <strong>Date</strong>
+                            <span>Sunday, 26 April 2026</span>
+                        </div>
+                        <div class="detail-row">
+                            <strong>Venue</strong>
+                            <span>St Joseph Church<br>KP Vallon Road, Kadavanthara<br>Kochi – 682020</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Preserved Location Button -->
+                    <a href="https://www.google.com/maps/search/?api=1&query=St+Joseph+Church+KP+Vallon+Road+Kadavanthara+Kochi+Kerala+682020" 
+                       target="_blank" class="map-btn">
+                        View Church Location
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- RECEPTION -->
+    <!-- RECEPTION SECTION - Kept timing cards -->
     <section class="section reception-section" id="reception">
         <div class="container">
             <div class="section-header">
-                <span class="divider"></span>
+                <span class="gold-divider"></span>
                 <h2>Reception</h2>
-                <p class="sub">A time of joyful celebration after the Mass</p>
             </div>
             
             <div class="reception-grid">
-                <div class="reception-block lunch">
-                    <div class="time-badge">12:00 Noon</div>
+                <!-- Lunch Card -->
+                <div class="reception-card">
+                    <div class="time-badge lunch">12:00 Noon</div>
                     <h3>Lunch Reception</h3>
                     <p>IMA House<br>Stadium Link Road<br>Kaloor, Kochi</p>
+                    <!-- Preserved Location Button -->
+                    <a href="https://www.google.com/maps/search/?api=1&query=IMA+House+Stadium+Link+Road+Kaloor+Kochi+Kerala" 
+                       target="_blank" class="map-btn small">View Venue</a>
                 </div>
                 
-                <div class="reception-block dinner">
-                    <div class="time-badge">6:30 PM – 8:30 PM</div>
+                <!-- Dinner Card -->
+                <div class="reception-card">
+                    <div class="time-badge dinner">6:30 PM – 8:30 PM</div>
                     <h3>Dinner Reception</h3>
                     <p>IMA House<br>Stadium Link Road<br>Kaloor, Kochi</p>
+                    <a href="https://www.google.com/maps/search/?api=1&query=IMA+House+Stadium+Link+Road+Kaloor+Kochi+Kerala" 
+                       target="_blank" class="map-btn small">View Venue</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- LOCATION -->
-    <section class="section location-section" id="location">
+    <!-- DIRECTIONS SECTION (for better mobile flow) -->
+    <section class="section" id="directions">
         <div class="container">
             <div class="section-header">
-                <h2>Find your way to us</h2>
+                <h2>Directions</h2>
             </div>
-            
-            <div class="location-buttons">
+            <div class="directions-grid">
                 <a href="https://www.google.com/maps/search/?api=1&query=St+Joseph+Church+KP+Vallon+Road+Kadavanthara+Kochi+Kerala+682020" 
-                   target="_blank" class="location-btn">
-                    View Church Location
-                </a>
+                   target="_blank" class="map-btn">View Church on Maps</a>
                 <a href="https://www.google.com/maps/search/?api=1&query=IMA+House+Stadium+Link+Road+Kaloor+Kochi+Kerala" 
-                   target="_blank" class="location-btn">
-                    View Reception Venue
-                </a>
+                   target="_blank" class="map-btn">View Reception Venue</a>
             </div>
         </div>
     </section>
@@ -146,10 +152,8 @@
     <section class="section blessing-section">
         <div class="container">
             <div class="blessing">
-                <p class="blessing-text">
-                    Your presence and blessings will make this sacred day even more meaningful. 
-                    May the light of the Eucharist shine brightly in Emmanuel’s life and in all our hearts.
-                </p>
+                <p>May the grace of the Eucharist fill Emmanuel’s heart and ours.<br>
+                Thank you for being part of this blessed day.</p>
                 <cite>— The Koodathinkal Family</cite>
             </div>
         </div>
@@ -158,8 +162,7 @@
     <!-- FOOTER -->
     <footer>
         <div class="container">
-            <p>May God bless you abundantly.</p>
-            <small>Crafted with reverence • Kochi, Kerala • 2026</small>
+            <small>Crafted with love • Kochi, Kerala • April 2026</small>
         </div>
     </footer>
 
