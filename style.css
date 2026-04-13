@@ -221,6 +221,7 @@ body {
 .hero-content {
     max-width: 720px;
     margin: 0 auto;
+    padding: 0 12px;
 }
 
 .eucharist-symbol {
@@ -234,14 +235,14 @@ body {
     font-size: clamp(2.8rem, 6vw, 4.2rem);
     font-weight: 400;
     letter-spacing: 3px;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     color: var(--dark);
 }
 
 .hero-name {
     font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 400;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
     color: var(--gold);
 }
 
@@ -249,7 +250,7 @@ body {
     font-size: 1.35rem;
     font-style: italic;
     max-width: 480px;
-    margin: 0 auto 22px;
+    margin: 0 auto 24px;
     color: #3f3f3f;
 }
 
@@ -264,7 +265,7 @@ body {
     border-radius: 50px;
     letter-spacing: 2px;
     box-shadow: var(--soft-shadow);
-    margin-bottom: 26px;
+    margin-bottom: 18px;
 }
 
 .hero-photo-container {
@@ -341,6 +342,11 @@ body {
     gap: 24px;
 }
 
+.mass-location-btn {
+    align-self: flex-start;
+    margin-top: -6px;
+}
+
 .detail-item {
     display: flex;
     justify-content: space-between;
@@ -362,7 +368,7 @@ body {
 /* Reception Cards */
 .reception-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 32px;
 }
 
@@ -530,6 +536,12 @@ body {
     .hero {
         padding-top: 70px;
     }
+
+    .hero-title,
+    .hero-name,
+    .hero-quote {
+        overflow-wrap: break-word;
+    }
     
     .invitation-card {
         padding: 52px 30px;
@@ -541,6 +553,14 @@ body {
     
     .section-heading {
         font-size: 2.1rem;
+    }
+
+    .reception-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mass-location-btn {
+        align-self: stretch;
     }
 }
 

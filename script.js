@@ -5,18 +5,18 @@ document.addEventListener('DOMContentLoaded', () => {
     // ====================== RECEPTION INVITE CODE LOGIC ======================
     function handleReceptionVisibility() {
         const urlParams = new URLSearchParams(window.location.search);
-        const inviteCode = urlParams.get('invite')?.toLowerCase();
+        const inviteCode = urlParams.get('i')?.toLowerCase();
 
         // Internal invitation mapping (kept private behind non-readable codes)
         const inviteMap = {
-            a7f2: 'lunch',
-            b9k4: 'dinner',
-            x3p8: 'both'
+            '7f3': 'lunch',
+            '9k2': 'dinner',
+            a4x: 'both'
         };
         const invitationType = inviteMap[inviteCode] || 'both';
 
-        const lunchCard = document.getElementById('lunch-card');
-        const dinnerCard = document.getElementById('dinner-card');
+        const lunchCard = document.getElementById('lunch-reception');
+        const dinnerCard = document.getElementById('dinner-reception');
 
         if (!lunchCard || !dinnerCard) return;
 
@@ -120,5 +120,5 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize reception visibility
     handleReceptionVisibility();
 
-    console.log('%c✅ Reception invite system ready (supports ?invite=<code>)', 'color:#d4af77; font-family:Georgia');
+    console.log('%c✅ Reception invite system ready (supports ?i=<code>)', 'color:#d4af77; font-family:Georgia');
 });
