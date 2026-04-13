@@ -5,6 +5,78 @@
 /* dark serif typography, spacious & calm        */
 /* ============================================= */
 
+/* ============================================= */
+/* TYPOGRAPHY IMPROVEMENTS - Elegant Invitation Style */
+/* Playfair Display for dates, times & ceremonial numbers */
+/* ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Playfair+Display:ital@0;1&display=swap');
+
+.playfair {
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+/* Refined Date Badge */
+.date-badge {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(1.45rem, 4.5vw, 1.85rem);
+    letter-spacing: 3.5px;
+    padding: 16px 46px;
+    color: #c19a5f;                    /* slightly softer luxurious gold */
+    border: 3px solid #d4af77;
+    background: white;
+    box-shadow: 0 10px 30px rgba(212, 175, 119, 0.18);
+}
+
+/* Premium Time Badges (Lunch & Dinner) */
+.time-badge {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    font-size: 1.35rem;
+    letter-spacing: 2px;
+    padding: 10px 28px;
+    background: #d4af77;
+    color: white;
+    border-radius: 50px;
+    text-transform: uppercase;          /* gives ceremonial feel */
+    box-shadow: 0 6px 20px rgba(212, 175, 119, 0.25);
+}
+
+/* Mass time & important numbers */
+.time-text,
+.detail-value.playfair {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    font-size: 1.38rem;
+    letter-spacing: 1.5px;
+    color: var(--dark);
+}
+
+/* Small caps treatment for AM/PM */
+.time-text::after,
+.detail-value.playfair::after {
+    content: attr(data-suffix);         /* optional: if you want to wrap AM/PM */
+    font-variant: small-caps;
+    letter-spacing: 2px;
+    font-size: 0.92em;
+    opacity: 0.85;
+}
+
+/* Extra polish for date in Mass section */
+.mass-content .detail-value {
+    font-size: 1.22rem;
+    line-height: 1.4;
+}
+
+/* Ensure headings remain consistent */
+.section-heading,
+.hero-title,
+.hero-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
 :root {
     --cream: #f8f4eb;
     --gold: #d4af77;
@@ -162,14 +234,14 @@ body {
     font-size: clamp(2.8rem, 6vw, 4.2rem);
     font-weight: 400;
     letter-spacing: 3px;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     color: var(--dark);
 }
 
 .hero-name {
     font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 400;
-    margin-bottom: 24px;
+    margin-bottom: 14px;
     color: var(--gold);
 }
 
@@ -177,7 +249,7 @@ body {
     font-size: 1.35rem;
     font-style: italic;
     max-width: 480px;
-    margin: 0 auto 32px;
+    margin: 0 auto 22px;
     color: #3f3f3f;
 }
 
@@ -192,7 +264,7 @@ body {
     border-radius: 50px;
     letter-spacing: 2px;
     box-shadow: var(--soft-shadow);
-    margin-bottom: 48px;
+    margin-bottom: 26px;
 }
 
 .hero-photo-container {
