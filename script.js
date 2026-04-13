@@ -13,25 +13,34 @@ document.addEventListener('DOMContentLoaded', () => {
             '9k2': 'dinner',
             a4x: 'both'
         };
-        const invitationType = inviteMap[inviteCode] || 'both';
+        const invitationType = inviteMap[inviteCode];
 
         const lunchCard = document.getElementById('lunch-reception');
         const dinnerCard = document.getElementById('dinner-reception');
+        const receptionNote = document.getElementById('reception-note');
 
         if (!lunchCard || !dinnerCard) return;
 
         if (invitationType === 'lunch') {
             lunchCard.style.display = 'block';
             dinnerCard.style.display = 'none';
+            if (receptionNote) receptionNote.style.display = 'none';
         } 
         else if (invitationType === 'dinner') {
             lunchCard.style.display = 'none';
             dinnerCard.style.display = 'block';
-        } 
-        else {
-            // default: both (missing/unknown invite code)
+            if (receptionNote) receptionNote.style.display = 'none';
+        }
+        else if (invitationType === 'both') {
             lunchCard.style.display = 'block';
             dinnerCard.style.display = 'block';
+            if (receptionNote) receptionNote.style.display = 'none';
+        } 
+        else {
+            // default base URL: hide reception details until invited
+            lunchCard.style.display = 'none';
+            dinnerCard.style.display = 'none';
+            if (receptionNote) receptionNote.style.display = 'block';
         }
     }
 
